@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京成線駅ナンバークイズ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- タイトル画面 -->
+    <div id="title-screen" class="screen">
+        <div class="title-container">
+            <img src="images/keisei-logo.png" alt="京成線ロゴ" class="title-logo">
+            <h1>京成線駅ナンバークイズ</h1>
+            <p>駅名を見て、正しい駅ナンバーを当てよう！</p>
+            <button id="start-button" class="btn">スタート</button>
+        </div>
+    </div>
+
+    <!-- クイズ画面 -->
+    <div id="quiz-screen" class="screen hidden">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <div class="progress">問題 <span id="current-question">1</span>/10</div>
+                <div class="score">正解数: <span id="score">0</span></div>
+            </div>
+            
+            <div class="question-container">
+                <!-- 京成線駅看板デザイン -->
+                <div class="station-signboard">
+                    <div class="station-name-display" id="station-name-display"></div>
+                </div>
+                <h2>この駅の番号は？</h2>
+            </div>
+            
+            <!-- 選択肢 -->
+            <div class="options-container">
+                <button class="option-btn" id="option-0">
+                    <img class="station-number-image" src="" alt="駅ナンバー1">
+                </button>
+                <button class="option-btn" id="option-1">
+                    <img class="station-number-image" src="" alt="駅ナンバー2">
+                </button>
+                <button class="option-btn" id="option-2">
+                    <img class="station-number-image" src="" alt="駅ナンバー3">
+                </button>
+                <button class="option-btn" id="option-3">
+                    <img class="station-number-image" src="" alt="駅ナンバー4">
+                </button>
+            </div>
+            
+            <!-- フィードバック表示 -->
+            <div id="result-feedback" class="feedback hidden">
+                <span id="feedback-text">正解です！</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 結果画面 -->
+    <div id="result-screen" class="screen hidden">
+        <div class="result-container">
+            <img src="images/keisei-logo.png" alt="京成線ロゴ" class="result-logo">
+            <h2>クイズ結果</h2>
+            <div class="final-score">10問中 <span id="final-score">0</span>問正解！</div>
+            <p id="result-message" class="result-message"></p>
+            <button id="restart-button" class="btn">もう一度挑戦する</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
